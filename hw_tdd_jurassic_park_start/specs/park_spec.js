@@ -28,13 +28,21 @@ describe('Park', function() {
   it('should be able to add a dinosaur to its collection', function(){
     const newDino1 = Dinosaur("brachiosaurus","herbivore",65);
     park.addDino(newDino1);
-    const newDino2 = Dinosaur("archaeopteryx","carnivore");
+    const newDino2 = Dinosaur("archaeopteryx","carnivore",25);
     park.addDino(newDino2);
     const actual = park.dinoCollection.length
     assert.deepStrictEqual(actual, 2);
   });
 
-  it('should be able to remove a dinosaur from its collection');
+  it('should be able to remove a dinosaur from its collection', function(){
+    const newDino1 = Dinosaur("brachiosaurus","herbivore",65);
+    park.addDino(newDino1);
+    const newDino2 = Dinosaur("archaeopteryx","carnivore",25);
+    park.addDino(newDino2);
+    park.removeDino();
+    const actual = park.dinoCollection.length
+    assert.deepStrictEqual(actual, 1);
+  });
 
   it('should be able to find the dinosaur that attracts the most visitors');
 

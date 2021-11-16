@@ -9,3 +9,7 @@ const Park = function (name, ticketPrice) {
   Park.prototype.addDino = function(dino) {
     this.dinoCollection.push(dino);
 };
+
+Park.prototype.removeDino = function() {
+    this.dinoCollection.pop();
+};
